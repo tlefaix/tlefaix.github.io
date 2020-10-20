@@ -166,6 +166,7 @@ let readBuffer = '';
 function handleCharacteristicValueChanged(event) {
   log("handleCharacteristicValueChanged");
   let value = new TextDecoder().decode(event.target.value);
+  log(value, 'in');
 
   for (let c of value) {
     if (c === '\n') {
