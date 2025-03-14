@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécommande</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c2c2c;
+        }
+
+        .remote {
+            width: 200px;
+            background: black;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .button {
+            width: 60px;
+            height: 40px;
+            background: grey;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: white;
+            color: black;
+        }
+
+        .power {
+            background: red;
+            color: white;
+            width: 80px;
+        }
+
+        .circle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="remote">
+    <button class="button power" onclick="sendCommand('POWER')">⏻</button>
+
+    <div class="circle">
+        <button class="button" onclick="sendCommand('UP')">▲</button>
+        <div class="row">
+            <button class="button" onclick="sendCommand('LEFT')">◀</button>
+            <button class="button" onclick="sendCommand('OK')">OK</button>
+            <button class="button" onclick="sendCommand('RIGHT')">▶</button>
+        </div>
+        <button class="button" onclick="sendCommand('DOWN')">▼</button>
+    </div>
+
+    <div class="row">
+        <button class="button" onclick="sendCommand('VOL+')">Vol +</button>
+        <button class="button" onclick="sendCommand('CH+')">Ch +</button>
+    </div>
+    <div class="row">
+        <button class="button" onclick="sendCommand('VOL-')">Vol -</button>
+        <button class="button" onclick="sendCommand('CH-')">Ch -</button>
+    </div>
+
+    <div class="row">
+        <button class="button" onclick="sendCommand('1')">1</button>
+        <button class="button" onclick="sendCommand('2')">2</button>
+        <button class="button" onclick="sendCommand('3')">3</button>
+    </div>
+    <div class="row">
+        <button class="button" onclick="sendCommand('4')">4</button>
+        <button class="button" onclick="sendCommand('5')">5</button>
+        <button class="button" onclick="sendCommand('6')">6</button>
+    </div>
+    <div class="row">
+        <button class="button" onclick="sendCommand('7')">7</button>
+        <button class="button" onclick="sendCommand('8')">8</button>
+        <button class="button" onclick="sendCommand('9')">9</button>
+    </div>
+    <div class="row">
+        <button class="button" onclick="sendCommand('*')">*</button>
+        <button class="button" onclick="sendCommand('0')">0</button>
+        <button class="button" onclick="sendCommand('#')">#</button>
+    </div>
+</div>
+
+<script>
+    function sendCommand(command) {
+        console.log("Commande envoyée:", command);
+        
+        // Exemple : Envoi Bluetooth (à activer si nécessaire)
+        /*
+        if (bluetoothDevice && bluetoothDevice.gatt.connected) {
+            let encoder = new TextEncoder();
+            let data = encoder.encode(command);
+            bluetoothDevice.writeValue(data);
+        }
+        */
+    }
+</script>
+
+</body>
+</html>
