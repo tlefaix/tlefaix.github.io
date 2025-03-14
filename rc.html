@@ -61,50 +61,55 @@
             width: 100%;
         }
     </style>
+    <script src="rc.js"/>
 </head>
 <body>
 
 <div class="remote">
-    <button class="button power" onclick="sendCommand('POWER')">⏻</button>
+    <div class="row">
+        <button class="button" onclick="connect()">&#128279;</button>
+        <button class="button power" onclick="send('12')">&#9203;</button>
+    </div> 
 
     <div class="circle">
-        <button class="button" onclick="sendCommand('UP')">▲</button>
+        <button class="button" onclick="send('B')">▲</button>
         <div class="row">
-            <button class="button" onclick="sendCommand('LEFT')">◀</button>
-            <button class="button" onclick="sendCommand('OK')">OK</button>
-            <button class="button" onclick="sendCommand('RIGHT')">▶</button>
+            <button class="button" onclick="send('1B')">◀</button>
+            <button class="button" onclick="send('15')">OK</button>
+            <button class="button" onclick="send('1C')">▶</button>
         </div>
-        <button class="button" onclick="sendCommand('DOWN')">▼</button>
+        <button class="button" onclick="send('C')">▼</button>
     </div>
 
     <div class="row">
-        <button class="button" onclick="sendCommand('VOL+')">Vol +</button>
-        <button class="button" onclick="sendCommand('CH+')">Ch +</button>
+        <button class="button" onclick="send('D')">Vol +</button>
+        <button class="button" onclick="send('F')">Mute</button>
+        <button class="button" onclick="send('10')">Ch +</button>
     </div>
     <div class="row">
-        <button class="button" onclick="sendCommand('VOL-')">Vol -</button>
-        <button class="button" onclick="sendCommand('CH-')">Ch -</button>
+        <button class="button" onclick="send('E')">Vol -</button>
+        <button class="button" onclick="send('1A')">Ch -</button>
     </div>
 
     <div class="row">
-        <button class="button" onclick="sendCommand('1')">1</button>
-        <button class="button" onclick="sendCommand('2')">2</button>
-        <button class="button" onclick="sendCommand('3')">3</button>
+        <button class="button" onclick="send('1')">1</button>
+        <button class="button" onclick="send('2')">2</button>
+        <button class="button" onclick="send('3')">3</button>
     </div>
     <div class="row">
-        <button class="button" onclick="sendCommand('4')">4</button>
-        <button class="button" onclick="sendCommand('5')">5</button>
-        <button class="button" onclick="sendCommand('6')">6</button>
+        <button class="button" onclick="send('4')">4</button>
+        <button class="button" onclick="send('5')">5</button>
+        <button class="button" onclick="send('6')">6</button>
     </div>
     <div class="row">
-        <button class="button" onclick="sendCommand('7')">7</button>
-        <button class="button" onclick="sendCommand('8')">8</button>
-        <button class="button" onclick="sendCommand('9')">9</button>
+        <button class="button" onclick="send('7')">7</button>
+        <button class="button" onclick="send('8')">8</button>
+        <button class="button" onclick="send('9')">9</button>
     </div>
     <div class="row">
-        <button class="button" onclick="sendCommand('*')">*</button>
-        <button class="button" onclick="sendCommand('0')">0</button>
-        <button class="button" onclick="sendCommand('#')">#</button>
+        <button class="button" onclick="send('34')">TV</button>
+        <button class="button" onclick="send('0')">0</button>
+        <button class="button" onclick="send('0A')">Back</button>
     </div>
 </div>
 
